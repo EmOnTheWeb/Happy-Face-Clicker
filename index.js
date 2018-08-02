@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 
 app.use('/faces',facesController);
 
-app.use(express.static('client/dist/Happy-Face-Clicker/')); 
+app.use(express.static('client')); 
 
 app.listen(port, () => {
   console.log('We are live on ' + port);
