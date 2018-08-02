@@ -5,6 +5,7 @@ const mongoose = require('mongoose');
 const app            = express();
 const db             = require('./config/db');
 const cors = require('cors');
+const path = require('path');
 
 
 mongoose.connect(db.url);
@@ -20,6 +21,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 
 app.use('/faces',facesController);
+
+app.use(express.static('client/dist/Happy-Face-Clicker/')); 
 
 app.listen(port, () => {
   console.log('We are live on ' + port);
