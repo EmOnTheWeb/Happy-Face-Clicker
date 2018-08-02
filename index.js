@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 
 app.use('/faces',facesController);
 
-app.use(express.static('client')); 
+app.use(express.static(path.join(__dirname, 'client'))); 
 
 app.listen(port, () => {
   console.log('We are live on ' + port);
