@@ -11,7 +11,7 @@ require('dotenv').config()
 mongoose.connect(process.env.DB_URL);
 
 const facesController = require('./controllers/faces');
-const port = 8000;
+var port = process.env.PORT || 8000; 
 
 //Middleware for CORS
 app.use(cors());
