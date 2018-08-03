@@ -3,12 +3,12 @@ const MongoClient    = require('mongodb').MongoClient;
 const bodyParser     = require('body-parser');
 const mongoose = require('mongoose');
 const app            = express();
-const db             = require('./config/db');
 const cors = require('cors');
 const path = require('path');
 
+require('dotenv').config()
 
-mongoose.connect(db.url);
+mongoose.connect(process.env.DB_URL);
 
 const facesController = require('./controllers/faces');
 const port = 8000;

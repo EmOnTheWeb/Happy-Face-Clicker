@@ -3,3 +3,4 @@ angular-src/node_modules
 config/db.js
 npm-debug.log
 .DS_Store
+.env
